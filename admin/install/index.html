@@ -1,0 +1,1211 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Network Solution Engineering - Architecture Decision Records">
+      
+      
+      
+        <link rel="canonical" href="https://psmware-ltd.github.io/architecture-decision-records-app/admin/install/">
+      
+      
+        <link rel="prev" href="../../user/app_getting_started/">
+      
+      
+        <link rel="next" href="../service/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Installation - Architecture Decision Records</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installing-the-app" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Architecture Decision Records" class="md-header__button md-logo" aria-label="Architecture Decision Records" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 64h128v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h160c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48h-48v-32h256v32h-48c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h160c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48h-48v-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352v-32h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448v-64h128v64H96zm320-64h128v64H416v-64z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architecture Decision Records
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/psmware-ltd/architecture-decision-records-app" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    psmware-ltd/architecture-decision-records-app
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Architecture Decision Records" class="md-nav__button md-logo" aria-label="Architecture Decision Records" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 64h128v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h160c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48h-48v-32h256v32h-48c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h160c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48h-48v-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352v-32h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448v-64h128v64H96zm320-64h128v64H416v-64z"/></svg>
+
+    </a>
+    Architecture Decision Records
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/psmware-ltd/architecture-decision-records-app" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    psmware-ltd/architecture-decision-records-app
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/app_overview/" class="md-nav__link">
+        App Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/app_use_cases/" class="md-nav__link">
+        Using the App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/app_getting_started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Administrator Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Administrator Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Install the ADR App
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Install the ADR App
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Installation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-system-packages" class="md-nav__link">
+    Install System Packages
+  </a>
+  
+    <nav class="md-nav" aria-label="Install System Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ldap-authentication" class="md-nav__link">
+    LDAP authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-setup" class="md-nav__link">
+    Database Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-postgresql-database" class="md-nav__link">
+    Create a PostgreSQL Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-postgresql-service-status" class="md-nav__link">
+    Verify PostgreSQL Service Status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-your-adr_root" class="md-nav__link">
+    Choose your ADR_ROOT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-app-system-user" class="md-nav__link">
+    Create the App System User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-the-virtual-environment" class="md-nav__link">
+    Setup the Virtual Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup the Virtual Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-virtual-environment" class="md-nav__link">
+    Create the Virtual Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-the-app-user-bashrc" class="md-nav__link">
+    Update the App User .bashrc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sudo-to-adr" class="md-nav__link">
+    Sudo to adr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-virtual-environment" class="md-nav__link">
+    Understanding the Virtual Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-virtual-environment" class="md-nav__link">
+    Prepare the Virtual Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-the-app" class="md-nav__link">
+    Install the App
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-your-installation" class="md-nav__link">
+    Verify your Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-your-configuration" class="md-nav__link">
+    Initialize your configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-settings" class="md-nav__link">
+    Required Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-database" class="md-nav__link">
+    Prepare the Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-superuser" class="md-nav__link">
+    Create a Superuser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-static-directories" class="md-nav__link">
+    Create Static Directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-your-configuration" class="md-nav__link">
+    Check your Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-application" class="md-nav__link">
+    Test the Application
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service/" class="md-nav__link">
+        Starting as a Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/" class="md-nav__link">
+        Starting a HTTP Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../selinux-troubleshooting/" class="md-nav__link">
+        Troubleshooting SElinux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Configure the ADR App
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Configure the ADR App
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/required-settings/" class="md-nav__link">
+        Required Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/ldap/" class="md-nav__link">
+        LDAP Authentication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade/" class="md-nav__link">
+        Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uninstall/" class="md-nav__link">
+        Uninstall
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/design/" class="md-nav__link">
+        Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/extending/" class="md-nav__link">
+        Extending the App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/contributing/" class="md-nav__link">
+        Contributing to the App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/dev_environment/" class="md-nav__link">
+        Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="installing-the-app">Installing the App</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This section describes the system dependencies required for The App. They can be all installed on a single system, or distributed across your environment. That will be up to you. Our install instructions assume a single system install, and that is good for most use cases. More advanced configurations are also possible, but are not covered here.</p>
+<p>Here you will find detailed instructions on how to <strong>install</strong> and <strong>configure</strong> the App on Ubuntu 20.04/22.04 LTS.</p>
+<h3 id="install-system-packages">Install System Packages</h3>
+<p>Install the prerequisite system libraries and utilities.</p>
+<p>This will install:</p>
+<ul>
+<li>Git</li>
+<li>Python 3</li>
+<li>Pip</li>
+<li>Redis server and client</li>
+<li>PostgreSQL server and client</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span>-y
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span>python3-venv<span class="w"> </span>python3-dev<span class="w"> </span>postgresql
+</code></pre></div>
+<h4 id="ldap-authentication">LDAP authentication</h4>
+<p>Install the prerequisite system libraries for LDAP authentication.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span>-y
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libsasl2-dev<span class="w"> </span>libldap2-dev<span class="w"> </span>libssl-dev
+</code></pre></div>
+<h3 id="database-setup">Database Setup</h3>
+<p>In this step you'll create a database and database user for use by the App, and verify your connection to the database.</p>
+<h4 id="create-a-postgresql-database">Create a PostgreSQL Database</h4>
+<p>At a minimum, we need to create a database for the App and assign it a username and password for authentication. This is done with the following commands.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Do not use the password from the example.</strong> Choose a strong, random password to ensure secure database authentication for your the App installation.</p>
+</div>
+<div class="highlight"><pre><span></span><code>sudo -u postgres psql
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>psql (14.7 (Ubuntu 14.7-0ubuntu0.22.04.1))
+Type &quot;help&quot; for help.
+
+postgres=# CREATE DATABASE adr;
+CREATE DATABASE
+postgres=# CREATE USER adr_db_usr WITH PASSWORD &#39;insecure_password&#39;;
+CREATE ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE adr TO adr_db_usr;
+GRANT
+postgres=# \q
+</code></pre></div>
+<h4 id="verify-postgresql-service-status">Verify PostgreSQL Service Status</h4>
+<p>You can verify that authentication works issuing the following command and providing the configured password. (Replace <code>localhost</code> with your database server if using a remote database.)</p>
+<p>If successful, you will enter a <code>adr</code> prompt. Type <code>\conninfo</code> to confirm your connection, or type <code>\q</code> to exit.</p>
+<div class="highlight"><pre><span></span><code>psql --username adr_db_usr --password --host localhost adr
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>Password:
+psql (14.7 (Ubuntu 14.7-0ubuntu0.22.04.1))
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
+Type &quot;help&quot; for help.
+
+adr=&gt;  \conninfo
+You are connected to database &quot;adr&quot; as user &quot;adr_db_usr&quot; on host &quot;localhost&quot; (address &quot;127.0.0.1&quot;) at port &quot;5432&quot;.
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
+adr=&gt; \q
+</code></pre></div>
+<h2 id="installation">Installation</h2>
+<p>This section of the documentation discusses installing and configuring the application itself.</p>
+<p>These instructions will guide you through the following actions:</p>
+<ul>
+<li>Establish an App root directory for the application environment</li>
+<li>Create an App <code>adr</code> system account</li>
+<li>Create a Python virtual environment (virtualenv)</li>
+<li>Install the App and all required Python packages</li>
+<li>Run the database schema migrations</li>
+<li>Aggregate static resource files on disk</li>
+<li>Verify the installation using the development/test server</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Your database server and Redis must have been successfully installed before continuing with deployment steps. If you haven't done that yet, please visit the guide on installing the <a href="#prerequisites">App Prerequisites</a></p>
+</div>
+<h3 id="choose-your-adr_root">Choose your <code>ADR_ROOT</code></h3>
+<p>You need to select a directory path where everything related to the ADR App will be installed. We will use this value across the documentation and it will be referred to as <code>ADR_ROOT</code>.</p>
+<p>We will be using this path as the home directory of the <code>adr</code> user.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We have selected <code>/opt/adr</code>, but you may use any directory you choose.</p>
+</div>
+<p>Later on, we will need to set this directory path as the <code>ADR_ROOT</code> environment variable to tell the ADR App where to find its files and settings.</p>
+<h3 id="create-the-app-system-user">Create the App System User</h3>
+<p>Create a system user account named <code>adr</code>. This user will own all of the App files, and the web services will be configured to run under this account.</p>
+<p>The following command also creates the <code>/opt/adr</code> directory and sets it as the home directory for the user.</p>
+<div class="highlight"><pre><span></span><code>sudo useradd --system --shell /bin/bash --create-home --home-dir /opt/adr adr
+</code></pre></div>
+<h3 id="setup-the-virtual-environment">Setup the Virtual Environment</h3>
+<p>A Python <a href="https://docs.python.org/3/tutorial/venv.html">virtual environment</a> or <em>virtualenv</em> is like a container for a set of Python packages. A virtualenv allows you to build environments suited to specific projects without interfering with system packages or other projects.</p>
+<p>When installed per the documentation, the ADR App uses a virtual environment in production.</p>
+<p>In the following steps, we will have you create the virtualenv within the <code>ADR_ROOT</code> you chose in the previous step. This is the same we had you set as the home directory as the <code>adr</code> user.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Instead of deliberately requiring you to activate/deactivate the virtualenv, we are emphasizing on relying on the <code>$PATH</code> to access programs installed within it. We find this to be much more intuitive and natural when working with the App in this way.</p>
+</div>
+<h4 id="create-the-virtual-environment">Create the Virtual Environment</h4>
+<p>As root, we're going to create the virtualenv in our <code>ADR_ROOT</code> as the <code>adr</code> user to populate the <code>/opt/adr</code> directory with a self-contained Python environment including a <code>bin</code> directory for scripts and a <code>lib</code> directory for Python libraries.</p>
+<div class="highlight"><pre><span></span><code>sudo -u adr python3 -m venv /opt/adr
+</code></pre></div>
+<h4 id="update-the-app-user-bashrc">Update the App User <code>.bashrc</code></h4>
+<p>So what about the <code>ADR_ROOT</code>? We've referenced this environment variable several times. Here is where it finally gets set.</p>
+<p>We need to set the <code>ADR_ROOT</code> environment variable for the <code>adr</code> user and make sure that it always set without having to do it manually.</p>
+<p>Run this command to update <code>~/.bashrc</code> for <code>adr</code> so that anytime you become <code>adr</code>, your <code>ADR_ROOT</code> will be set automatically.</p>
+<div class="highlight"><pre><span></span><code>echo &quot;export ADR_ROOT=/opt/adr&quot; | sudo tee -a ~adr/.bashrc
+</code></pre></div>
+<h3 id="sudo-to-adr">Sudo to adr</h3>
+<p>It is critical to install the ADR App as the <code>adr</code> user so that we don't have to worry about fixing permissions later.</p>
+<div class="highlight"><pre><span></span><code>sudo -iu adr
+</code></pre></div>
+<p>Observe also that you can now echo the value of the <code>ADR_ROOT</code> environment variable that is automatically set because we added to <code>.bashrc</code>:</p>
+<div class="highlight"><pre><span></span><code>echo $ADR_ROOT
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>/opt/adr
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Unless explicitly stated, all remaining steps requiring the use of <code>pip3</code> or <code>python manage.py</code> in this document should be performed as the <code>adr</code> user!</p>
+</div>
+<h3 id="understanding-the-virtual-environment">Understanding the Virtual Environment</h3>
+<p>Because the <code>adr</code> user was created with <code>ADR_ROOT</code> set as its home directory and we had you set the shell to <code>/bin/bash</code>, the binary path <code>$ADR_ROOT/bin</code> is automatically added to the beginning of the <code>$PATH</code> environment variable:</p>
+<p>In Ubuntu &gt;=20.04:</p>
+<div class="highlight"><pre><span></span><code>echo $PATH
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>/opt/adr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+</code></pre></div>
+<p>Due to differences between OS, in CentOS <code>$PATH</code> will appear as:</p>
+<div class="highlight"><pre><span></span><code>echo $PATH
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>/opt/adr/.local/bin:/opt/adr/bin:/opt/adr/.local/bin:/opt/adr/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin
+</code></pre></div>
+<p>Therefore, any commands executed by the <code>adr</code> user will always check <code>$ADR_ROOT/bin</code> first.</p>
+<p>Since <code>ADR_ROOT</code> also contains the Python virtualenv for the ADR App, all of the commands you will execute as the <code>adr</code> user, will automatically prefer the virtualenv's commands because they come first in the <code>$PATH</code>.</p>
+<p>As the <code>adr</code> user, you may use <code>which pip3</code> to confirm that you are using the correct version of <code>pip3</code>. The path should match that of <code>$ADR_ROOT/bin</code>. For example:</p>
+<div class="highlight"><pre><span></span><code>which pip3
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>/opt/adr/bin/pip3
+</code></pre></div>
+<p>This makes sure that the version of Python you're using, as well any dependencies that you install, remain isolated in this environment.</p>
+<h3 id="prepare-the-virtual-environment">Prepare the Virtual Environment</h3>
+<p>Before we install anything into the virtualenv, we want to make sure that Pip is running the latest version.</p>
+<p><a href="https://pip.pypa.io/">Pip</a> is Python's package installer and is referred interchangeably as <code>pip</code> or <code>pip3</code>. For the purpose of this document, we'll deliberately be referring to it as <code>pip3</code>. Many common issues can be solved by running the latest version of Pip. Before continuing with installing the ADR App, upgrade Pip to its latest release.</p>
+<p>We also want to deliberately install the <code>wheel</code> library which will tell Pip to always try to install wheel packages if they are available. A <a href="https://realpython.com/python-wheels/">wheel is a pre-compiled Python package</a>, which is quicker and safer to install because it does not require development libraries or <code>gcc</code> to be installed on your system just so that some more advanced Python libraries can be compiled.</p>
+<div class="highlight"><pre><span></span><code>pip3 install --upgrade pip wheel
+</code></pre></div>
+<h3 id="install-the-app">Install the App</h3>
+<div class="admonition warning">
+<p class="admonition-title">Developer Note - Remove Me!</p>
+<p>Detailed instructions on how to get the app from GitHub.</p>
+</div>
+<p>Use Pip to install the requirements:</p>
+<div class="highlight"><pre><span></span><code>pip3 install architecture-decision-records
+</code></pre></div>
+<p>Great! We have <code>ADR_ROOT</code> ready for use by the <code>adr</code> user, so let's proceed to verifying the installation.</p>
+<h2 id="verify-your-installation">Verify your Installation</h2>
+<p>You should now have a  <code>adrs</code> (Architecture Decisions Records - Server)  command in your environment. This will be your gateway to all things for the <em>architecture-decision-records</em>! Run it to confirm the installed version of <code>architecture-decision-records</code>:</p>
+<div class="highlight"><pre><span></span><code>adrs --version
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>0.1.0
+</code></pre></div>
+<h2 id="configuration">Configuration</h2>
+<p>Before you can use the ADR App, you'll need to configure it by telling it where your database can be found, among other things. This is done with the <code>adr_config.py</code> configuration file.</p>
+<h3 id="initialize-your-configuration">Initialize your configuration</h3>
+<p>Initialize a new configuration by running <code>adrs init</code>. You may specify an alternate location and detailed instructions for this are covered in the documentation on <a href="../../configuration/">Configuration</a>.</p>
+<p>However, because we've set the <code>ADR_ROOT</code>, this command will automatically create a new <code>adr_config.py</code> at the default location based on this at <code>$ADR_ROOT/adr_config.py</code>:</p>
+<div class="highlight"><pre><span></span><code>adrs init
+Configuration file created at /opt/adr/adr_config.py
+</code></pre></div>
+<h3 id="required-settings">Required Settings</h3>
+<p>Your <code>adr_config.py</code> provides sane defaults for all of the configuration settings. You will inevitably need to update the settings for your environment, most notably the <a href="../../configuration/required-settings/#databases"><code>DATABASES</code></a> setting. If you do not wish to modify the config, by default, many of these configuration settings can also be specified by environment variables. Please see <a href="../../configuration/required-settings/">Required Settings</a> for further details.</p>
+<p>Edit <code>$ADR_ROOT/adr_config.py</code>, and head over to the documentation on <a href="../../configuration/required-settings/">Required Settings</a> to tweak your required settings. At a minimum, you'll need to update the following settings:</p>
+<ul>
+<li><a href="../../configuration/required-settings/#allowed_hosts"><code>ALLOWED_HOSTS</code></a>: You must set this value. This can be set to <code>["*"]</code> for a quick start, but this value is not suitable for production deployment.</li>
+<li><a href="../../configuration/required-settings/#databases"><code>DATABASES</code></a>: Database connection parameters. If you installed your database server on the same system as the ADR App, you'll need to update the <code>USER</code> and <code>PASSWORD</code> fields here. If you are using MySQL, you'll also need to update the <code>ENGINE</code> field, changing the default database driver suffix from <code>django.db.backends.postgresql</code> to <code>django.db.backends.mysql</code>.</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You absolutely must update your required settings in your <code>adr_config.py</code> or the ADR App will __not work___.</p>
+</div>
+<p>Save your changes to your <code>adr_config.py</code> and then proceed to the next step.</p>
+<h3 id="prepare-the-database">Prepare the Database</h3>
+<p>Before the App can run, the database migrations must be performed to prepare the database for use. This will populate the database tables and relationships:</p>
+<div class="highlight"><pre><span></span><code>adrs migrate
+</code></pre></div>
+<h3 id="create-a-superuser">Create a Superuser</h3>
+<p>The App does not come with any predefined user accounts. You'll need to create a administrative superuser account to be able to log into the App for the first time.</p>
+<div class="highlight"><pre><span></span><code>adrs createsuperuser
+</code></pre></div>
+<h3 id="create-static-directories">Create Static Directories</h3>
+<p>The App relies upon many static files including:</p>
+<ul>
+<li><code>media</code> - For storing uploaded images and attachments</li>
+<li><code>static</code> - The home for CSS, JavaScript, and images</li>
+</ul>
+<p>Each of these have their own corresponding setting that defined in <code>adr\settings\_base.py</code>, but by default they will all be placed in <code>ADR_ROOT</code> unless you specify otherwise by customizing their unique variable.</p>
+<p>The <code>collectstatic</code> command will create these directories if they do not exist, and in the case of the <code>static</code> files directory, it will also copy the appropriate files:</p>
+<div class="highlight"><pre><span></span><code>adrs collectstatic
+</code></pre></div>
+<h2 id="check-your-configuration">Check your Configuration</h2>
+<p>The ADR App leverages Django's built-in <a href="https://docs.djangoproject.com/en/stable/topics/checks/#writing-your-own-checks">system check framework</a> to validate the configuration to detect common problems and to provide hints for how to fix them.</p>
+<p>Checks are ran automatically when running a development server using <code>adrs runserver</code>, but not when running in production using WSGI.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Get into the habit of running checks before deployments! <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm3.82 1.636a.75.75 0 0 1 1.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 0 1 1.222.87l-.022-.015c.02.013.021.015.021.015v.001l-.001.002-.002.003-.005.007-.014.019a2.066 2.066 0 0 1-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.331 3.331 0 0 1-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 0 1 .183-1.044ZM12 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM5 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5.25 2.25.592.416a97.71 97.71 0 0 0-.592-.416Z"/></svg></span></p>
+</div>
+<div class="highlight"><pre><span></span><code>adrs check
+</code></pre></div>
+<h2 id="test-the-application">Test the Application</h2>
+<p>At this point, we should be able to run the ADR App's development server for testing. We can check by starting a
+development instance:</p>
+<div class="highlight"><pre><span></span><code>adrs runserver 0.0.0.0:8080 --insecure
+</code></pre></div>
+<p>Next, connect to the name or IP of the server (as defined in <code>ALLOWED_HOSTS</code>) on port 8080; for example, <a href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a>. You should be greeted with the Application home page.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>DO NOT USE THIS SERVER IN A PRODUCTION SETTING.</strong> The development server is for development and testing purposes only. It is neither performant nor secure enough for production use.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the test service does not run, or you cannot reach the ADR App home page, something has gone wrong. Do not proceed with the rest of this guide until the installation has been corrected. Some platforms (such as CentOS) have a firewall enabled by default. If you are unable to connect to the server url on port 8080, verify the firewall policy to allow the appropriate connections, or select an already permitted port.</p>
+</div>
+<p>Note that the initial user interface will be locked down for non-authenticated users.</p>
+<p><img alt="UI as seen by a non-authenticated user" src="../../images/ui_guest.png" /></p>
+<p>Try logging in using the superuser account we just created. Once authenticated, you'll be able to access all areas of the UI:</p>
+<p><img alt=" UI as seen by an administrator" src="../../images/ui_admin.png" /></p>
+<p>Type <code>Ctrl-C</code> to stop the development server. Now you're ready to proceed to starting the App as a system service.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "toc.follow", "toc.integrate", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
