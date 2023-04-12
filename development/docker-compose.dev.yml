@@ -1,0 +1,29 @@
+# We can't remove volumes in a compose override, for the test configuration using the final containers
+# we don't want the volumes so this is the default override file to add the volumes in the dev case
+# any override will need to include these volumes to use them.
+# see:  https://github.com/docker/compose/issues/3729
+---
+version: "3.4"
+services:
+  adr-dj-api:
+    command: "adrs runserver 0.0.0.0:8080"
+    ports:
+      - "8080:8080"
+    volumes:
+      - "../:/source"
+  adr-dj-docs:
+    entrypoint: "mkdocs serve -v -a 0.0.0.0:8080"
+    ports:
+      - "8001:8080"
+    volumes:
+      - "../docs:/source/docs:ro"
+      - "../mkdocs.yml:/source/mkdocs.yml:ro"
+    image: "adra:py${PYTHON_VER}"
+    container_name: "adr-dj-docs"
+    hostname: "adr-dj-docs"
+    healthcheck:
+      disable: true
+    tty: true
+  adr-dj-db:
+    ports:
+      - "5432"

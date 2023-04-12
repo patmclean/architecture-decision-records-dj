@@ -1,0 +1,59 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary noprint">
+  <div class="container-fluid">
+    <a href="{% url 'home' %}" class="navbar-brand" style="color:white;"><img src="{% static 'img/logo.svg' %}"
+        class="navbar-brand mr-2" alt="ADR Logo" width="50" height="50"> Architecture Decision Records</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <form class="d-flex" action="{% url 'search_results' %}" method="get">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      {% if request.user.is_authenticated %}
+      <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a href="{% url 'decision_new' %}" class="btn btn-primary" id="edit-button"><i
+              class="fa-solid fa-file-circle-plus"></i> Create
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="btn btn-primary dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false" title="{{ request.user }}">
+            <i class="fa-regular fa-circle-user"></i> Help
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="{% url 'markdown' %}"><i class="fa-solid fa-feather-pointed"></i>
+                Markdown Cheat
+                Sheet</a></li>
+            <li><a class="dropdown-item" href="{% url 'about' %}"><i class="fa-solid fa-circle-info"></i> About</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="btn btn-primary dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false" title="{{ request.user }}">
+            <i class="fa-regular fa-circle-user"></i> {{ request.user.first_name | truncatechars:"30" | capfirst}}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+            {% if request.user.is_staff %}
+            <li><a class="dropdown-item" href="{% url 'admin:index' %}"><i class="fa-solid fa-gears"></i> Admin</a>
+            </li>
+            {%endif%}
+            <div class="dropdown-divider"></div>
+            <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+      {% else %}
+      <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item"><a class="btn btn-primary ms-auto my-2 ml-2"
+            href="{% url 'login' %}?next={% url 'home' %}"><i class="fa fa-sign-in"></i>
+            Log in</a></li>
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</nav>

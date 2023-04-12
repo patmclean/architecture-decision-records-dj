@@ -1,0 +1,115 @@
+[tool.poetry]
+name = "architecture-decision-records"
+version = "0.1.0"
+description = "Architecture Decision Records App"
+authors = ["Patrick McLean <github@mcleans.ie>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/psmware-ltd/architecture-decision-records-app"
+documentation = "https://docs.psmware.io/architecture-decision-records-app"
+packages = [
+    {include = "architecture_decision_records"}
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+djangorestframework = "^3.14.0"
+psycopg2-binary = "^2.9.5"
+pyuwsgi = "^2.0.21"
+django-auth-ldap = "^4.1.0"
+django-cors-headers = "^3.14.0"
+django-crispy-forms = "^2.0"
+crispy-bootstrap5 = "^0.7"
+django-markdownify = "^0.9.3"
+django-xhtml2pdf = "^0.0.4"
+
+[tool.poetry.group.dev.dependencies]
+invoke = "^2.0.0"
+bandit = "^1.7.5"
+black = "^23.1.0"
+coverage = "^7.2.1"
+flake8 = "^6.0.0"
+ipython = "^8.11.0"
+pydocstyle = "^6.3.0"
+pylint = "^2.17.0"
+pylint-django = "^2.5.3"
+pytest = "^7.2.2"
+yamllint = "^1.29.0"
+toml = "^0.10.2"
+mkdocs = "^1.4.2"
+mkdocs-material = "^9.1.2"
+mkdocs-version-annotations = "^1.0.0"
+mkdocstrings = "^0.20.0"
+mkdocstrings-python = "^0.8.3"
+mkdocs-material-extensions = "^1.1.1"
+mkdocs-include-markdown-plugin = "^4.0.4"
+
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | settings.py     # This is where you define files that should not be stylized by black
+  | tasks.py        # the root of the project
+)
+'''
+[tool.poetry.scripts]
+adrs = "architecture_decision_records.core.cli:main"
+
+[tool.pylint.master]
+# Include the pylint_django plugin to avoid spurious warnings about Django patterns
+load-plugins="pylint_django"
+
+[tool.pylint.basic]
+# No docstrings required for private methods (Pylint default), or for test_ functions, or for inner Meta classes.
+no-docstring-rgx="^(_|test_|Meta$)"
+# Don't complain about Django's "pk" fields
+good-names = '''_,i,j,k,pk'''
+
+[tool.pylint.messages_control]
+# line-too-long: Line length is enforced by Black, so pylint doesn't need to check it.
+# too-few-public-methods: is just plain noise.
+# too-many-ancestors: is just a fact of life when dealing with Django inheritance hierarchies.
+disable = """,
+    line-too-long,
+    too-few-public-methods,
+    too-many-ancestors,
+    consider-using-dict-items,
+    wildcard-import,
+    unused-wildcard-import,
+    no-member,
+    """
+
+[tool.pylint.miscellaneous]
+# Don't flag TODO as a failure, let us commit with things that still need to be done in the code
+notes = """,
+    FIXME,
+    XXX,
+    """
+
+[tool.pylint.similarities]
+min-similarity-lines = 15
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+python_paths = "./"
+testpaths = "tests/"
+addopts = "-vv --doctest-modules"

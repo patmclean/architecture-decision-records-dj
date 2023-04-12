@@ -1,0 +1,24 @@
+---
+x-adr-dj-build: &adr-dj-build
+  build:
+    args:
+      PYTHON_VER: "${PYTHON_VER}"
+    context: "../"
+    dockerfile: "development/Dockerfile"
+x-adr-dj-base: &adr-dj-base
+  image: "adra:py${PYTHON_VER}"
+  env_file:
+    - "dev.env"
+    - "creds.env"
+  tty: true
+
+version: "3.4"
+services:
+  adr-dj-api:
+    container_name: "adr-dj-api"
+    hostname: "adr-dj-api"
+    depends_on:
+      - "adr-dj-db"
+      - "adr-dj-ad"
+    <<: *adr-dj-build
+    <<: *adr-dj-base

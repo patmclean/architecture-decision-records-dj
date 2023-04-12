@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Page Not Found :(</title>
+    <link rel="stylesheet" href="{% static 'css/404.css' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+
+
+    <body>
+
+    <div class="unicorn"></div>
+
+    <div class="container">
+
+        <div class="four-oh-four"><h1>404 Error</h1></div>
+
+        <div class="warning">
+            <h2>"All those moments will be lost in time, like tears in rain."</h2>
+            <p>The record(s) you are looking for cannot be found, or are unavailable.</p>
+            <a href="javascript:history.back()">Please go back to the previous page</a>
+        </div>
+
+    </div><!-- /.container -->
+    <script type="text/javascript" src="{% static 'js/404.js' %}" charset="UTF-8"></script>
+    </body>
+</html>
+

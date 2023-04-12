@@ -1,0 +1,20 @@
+.panel table {
+    margin-bottom: 0;
+}
+
+.panel .table th {
+    border-bottom-width: 1px;
+}
+
+.panel table tr.even:first-child td {
+    border-top: 0;
+}
+
+.panel .list-group {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.pull-right {
+    float: right !important;
+}

@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} - Login {% endblock %}
+{% block content %}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-centered">
+        <h1 class="mt-5 mb-3">Login</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3 mt-3">
+        <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          {{ form | crispy }}
+          {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+          <p style="font-size: 13px;">
+            {{ error|escape }}
+          </p>
+          {% endfor %} {% endif %}
+          <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

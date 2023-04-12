@@ -1,0 +1,126 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "Architecture Decision Records - Django"
+		}
+	],
+	"settings": {
+		"terminal.integrated.profiles.linux": {
+			"zsh (login)": {
+				"path": "zsh",
+				"args": [
+					"-l"
+				]
+			}
+		},
+		"files.associations": {
+			"**/*.html": "html",
+		},
+		// Python Linting settings
+		"python.linting.enabled": true,
+		"python.linting.lintOnSave": true,
+		"python.formatting.provider": "black",
+		// Python Execution settings
+		"python.languageServer": "Pylance",
+		"python.analysis.autoSearchPaths": true,
+		"python.defaultInterpreterPath": ".venv/bin/python",
+		// Python Docstring settings
+		"autoDocstring.docstringFormat": "google",
+		"autoDocstring.generateDocstringOnEnter": true,
+		"autoDocstring.quoteStyle": "'''",
+		"yaml.customTags": [
+			"tag:yaml.org,2002:python/name:materialx.emoji.to_svg",
+			"tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+			"tag:yaml.org,2002:python/name:materialx.emoji.twemoji",
+		],
+		"cSpell.ignorePaths": [
+			"**/package-lock.json",
+			"**/node_modules/**",
+			"**/vscode-extension/**",
+			"**/.git/objects/**",
+			"**/parsers/templates/**",
+			".vscode",
+			"data",
+			".devcontainer/**",
+			".vscode-insiders",
+			"tasks.py",
+			"conf.yml",
+			"mkdocs.yml",
+			"JenkinsConfig.yml",
+			"pyproject.toml",
+			"*.env",
+			"**.code-workspace"
+		],
+		"cSpell.words": [
+			"abbr",
+			"adduser",
+			"adra",
+			"adrs",
+			"authtoken",
+			"autonumber",
+			"autorefs",
+			"collectstatic",
+			"corsheaders",
+			"creds",
+			"curval",
+			"dcramer",
+			"extn",
+			"filterset",
+			"fontawesome",
+			"funcs",
+			"gunicorn",
+			"healthcheck",
+			"htmx",
+			"journalctl",
+			"ldif",
+			"libldap",
+			"libsasl",
+			"makemigrations",
+			"MARKDOWNIFY",
+			"markdownlint",
+			"materialx",
+			"microservices",
+			"mkdir",
+			"mkdocs",
+			"mkdocstrings",
+			"nohighlight",
+			"PGPASSWORD",
+			"plugins",
+			"progressbar",
+			"psmware",
+			"psql",
+			"psycopg",
+			"pydocstyle",
+			"pymdownx",
+			"pypi",
+			"pypoetry",
+			"pyproject",
+			"REFERER",
+			"revisioncomment",
+			"robouser",
+			"runserver",
+			"smartsymbols",
+			"standardise",
+			"subdevice",
+			"superfences",
+			"timeframe",
+			"usermod",
+			"vars",
+			"venv",
+			"viewset",
+			"viewsets",
+			"virtualenv",
+			"virtualenvs"
+		],
+		"cSpell.language": "en-GB",
+		"cSpell.enabledLanguageIds": [
+			"python",
+			"javascript",
+			"json",
+			"markdown",
+			"plaintext",
+			"yml"
+		],
+	}
+}

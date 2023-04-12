@@ -1,0 +1,88 @@
+---
+site_name: "Architecture Decision Records"
+site_description: "Network Solution Engineering - Architecture Decision Records"
+repo_url: "https://github.com/psmware-ltd/architecture-decision-records-app"
+site_url: "https://psmware-ltd.github.io/architecture-decision-records-app"
+edit_uri: "blob/develop/docs/"
+repo_name: "psmware-ltd/architecture-decision-records-app"
+
+nav:
+  - Home: "index.md"
+  - Overview: "index.md"
+  - User Guide:
+      - App Overview: "user/app_overview.md"
+      - Using the App: "user/app_use_cases.md"
+      - Getting Started: "user/app_getting_started.md"
+  - Administrator Guide:
+      - Install and Configure: "admin/install.md"
+      - Starting as a Service: "admin/service.md"
+      - Starting a HTTP Service: "admin/http.md"
+      - Upgrade: "admin/upgrade.md"
+      - Uninstall: "admin/uninstall.md"
+  - Developer Guide:
+      - Design: "dev/design.md"
+      - Extending the App: "dev/extending.md"
+      - Contributing to the App: "dev/contributing.md"
+      - Development Environment: "dev/dev_environment.md"
+
+# ==================================================================================================================================
+# Setting up the basic NAT docs theme
+theme:
+  icon:
+    # Change teh above Icon to suit your project, if desired
+    logo: "fontawesome/solid/network-wired"
+    repo: "fontawesome/brands/github"
+  name: "material"
+  palette:
+    - scheme: "default"
+      primary: "blue"
+      toggle:
+        icon: "material/lightbulb-outline"
+        name: "Switch to dark mode"
+    - scheme: "slate"
+      primary: "black"
+      accent: "teal"
+      toggle:
+        icon: "material/lightbulb"
+        name: "Switch to light mode"
+  features:
+    - "navigation.instant"
+    - "toc.follow"
+    - "toc.integrate"
+    - "navigation.tracking"
+
+# ==================================================================================================================================
+# Setting up the basic plugins
+plugins:
+  - "search"
+  - "autorefs"
+  - "mkdocstrings"
+  - "include-markdown"
+
+
+# ==================================================================================================================================
+# Setting up the required markdown extensions
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: "mermaid"
+          class: "mermaid"
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - "abbr"
+  - "attr_list"
+  - "admonition"
+  - "pymdownx.critic"
+  - "pymdownx.caret"
+  - "pymdownx.mark"
+  - "pymdownx.highlight"
+  - "pymdownx.progressbar"
+  - "pymdownx.smartsymbols"
+  - "pymdownx.snippets"
+  - "pymdownx.keys"
+  - "pymdownx.tilde"
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - "css/extra.css"

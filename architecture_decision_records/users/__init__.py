@@ -1,0 +1,1 @@
+default_app_config = "architecture_decision_records.users.apps.UsersConfig"
