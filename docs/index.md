@@ -9,7 +9,7 @@ An Architectural Decision (AD) is a justified design choice that addresses a fun
 
 The purpose of this application is to capture an Architectural Decision and its rationale; display the collection of ADRs created and maintained as a decision log.
 
-![App Icon](./images/icon-adr-dj.png){: style="width: 50%;"}
+![App Icon](./images/icon-adr.png){: style="width: 50%;"}
 
 ## Documentation
 

@@ -1,6 +1,6 @@
-# Uninstall the App from Nautobot
+# Uninstall the App from the ADR App
 
-Here you will find any steps necessary to cleanly remove the App from your Nautobot environment.
+Here you will find any steps necessary to cleanly remove the App from your the ADR App environment.
 
 ## Uninstall Guide
 

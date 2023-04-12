@@ -22,8 +22,9 @@ AUTH_USER_MODEL = "users.User"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv("ADR_ALLOWED_HOSTS", "*").split(" ")
 
+SECRET_KEY = os.getenv("ADR_SECRET_KEY", "django-insecure-0w5!cas22(uo_@sz7yi33zw0b@1jd*j9!fu8u=o8w0mr+1ax1iv")
 
 # Application definition
 
@@ -86,8 +87,15 @@ LOGIN_REDIRECT_URL = LOGOUT_REDIRECT_URL = "home"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": os.getenv("ADR_DB_NAME", "adr"),  # Database name
+        "USER": os.getenv("ADR_DB_USER", ""),  # Database username
+        "PASSWORD": os.getenv("ADR_DB_PASSWORD", ""),  # Database password
+        "HOST": os.getenv("ADR_DB_HOST", "localhost"),  # Database server
+        "PORT": os.getenv("ADR_DB_PORT", ""),  # Database port (leave blank for default)
+        "CONN_MAX_AGE": int(os.getenv("ADR_DB_TIMEOUT", "300")),  # Database timeout
+        "ENGINE": os.getenv(
+            "ADR_DB_ENGINE", "django.db.backends.postgresql"
+        ),  # Database driver "postgresql"
     }
 }
 

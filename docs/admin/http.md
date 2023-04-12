@@ -4,7 +4,7 @@ This documentation provides example configurations for [NGINX](https://www.nginx
 
 ## Obtain an SSL Certificate
 
-To enable HTTPS access to the ADR App, you'll need a valid SSL certificate. You can purchase one from a trusted commercial provider, obtain one for free from [Let's Encrypt](https://letsencrypt.org/getting-started/), or generate your own (although self-signed certificates are generally untrusted). Both the public certificate and private key files need to be installed on your Nautobot server in a secure location that is readable only by the `root` user.
+To enable HTTPS access to the ADR App, you'll need a valid SSL certificate. You can purchase one from a trusted commercial provider, obtain one for free from [Let's Encrypt](https://letsencrypt.org/getting-started/), or generate your own (although self-signed certificates are generally untrusted). Both the public certificate and private key files need to be installed on your ADR App server in a secure location that is readable only by the `root` user.
 
 !!! warning
     The command below can be used to generate a self-signed certificate for testing purposes, however it is strongly recommended to use a certificate from a trusted authority in production.
@@ -105,7 +105,7 @@ server {
 
 On Ubuntu:
 
-To enable the Nautobot site, you'll need to delete `/etc/nginx/sites-enabled/default` and create a symbolic link in the
+To enable the ADR App site, you'll need to delete `/etc/nginx/sites-enabled/default` and create a symbolic link in the
 `sites-enabled` directory to the configuration file you just created:
 <!-- spell-checker: disable -->
 ```no-highlight
@@ -130,7 +130,7 @@ sudo systemctl restart nginx
 ```
 <!-- spell-checker: enable -->
 !!! info
-    If the restart fails, and you changed the default key location, check to make sure the `nautobot.conf` file you pasted has the updated key location. For example, CentOS requires keys to be in `/etc/pki/tls/` instead of `/etc/ssl/`.
+    If the restart fails, and you changed the default key location, check to make sure the `adr.conf` file you pasted has the updated key location. For example, CentOS requires keys to be in `/etc/pki/tls/` instead of `/etc/ssl/`.
 
 ## Confirm Permissions for ADR_ROOT
 
@@ -146,10 +146,10 @@ chmod 755 $ADR_ROOT
 At this point, you should be able to connect to the HTTPS service at the server name or IP address you provided. If you used a self-signed certificate, you will likely need to explicitly allow connectivity in your browser.
 
 !!! info
-    Please keep in mind that the configurations provided here are bare minimums required to get Nautobot up and running. You may want to make adjustments to better suit your production environment.
+    Please keep in mind that the configurations provided here are bare minimums required to get the ADR App up and running. You may want to make adjustments to better suit your production environment.
 
 !!! warning
-    Certain components of Nautobot (such as the display of rack elevation diagrams) rely on the use of embedded objects. Ensure that your HTTP server configuration does not override the `X-Frame-Options` response header set by Nautobot.
+    Certain components of the ADR App (such as the display of rack elevation diagrams) rely on the use of embedded objects. Ensure that your HTTP server configuration does not override the `X-Frame-Options` response header set by the ADR App.
 
 ## Troubleshooting
 

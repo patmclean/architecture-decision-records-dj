@@ -5,7 +5,7 @@ from django.core.management.base import BaseCommand
 
 
 HELP_TEXT = """
-Performs Nautobot common server upgrade operations using a single entrypoint.
+Performs adr common server upgrade operations using a single entrypoint.
 This will run the following management commands with default settings, in order:
 - migrate
 - collectstatic

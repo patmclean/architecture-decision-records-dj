@@ -1,6 +1,6 @@
 # App Overview
 
-This document provides an overview of the App including critical information and import considerations when applying it to your Nautobot environment.
+This document provides an overview of the App including critical information and import considerations when applying it to your ADR App environment.
 
 !!! note
     Throughout this documentation, the terms "app" and "project" will be used interchangeably.
@@ -20,7 +20,7 @@ This document provides an overview of the App including critical information and
 ## Django Features Used
 
 !!! warning "Developer Note - Remove Me!"
-    What is shown today in the Installed Plugins page in Nautobot. What parts of Nautobot does it interact with, what does it add etc. ?
+    What is shown today in the Installed Plugins page in the ADR App. What parts of the ADR App does it interact with, what does it add etc. ?
 
 ### Extras
 

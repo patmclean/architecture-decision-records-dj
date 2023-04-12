@@ -14,9 +14,15 @@ nav:
       - Using the App: "user/app_use_cases.md"
       - Getting Started: "user/app_getting_started.md"
   - Administrator Guide:
-      - Install and Configure: "admin/install.md"
-      - Starting as a Service: "admin/service.md"
-      - Starting a HTTP Service: "admin/http.md"
+      - Install the ADR App:
+        - Installation: "admin/install.md"
+        - Starting as a Service: "admin/service.md"
+        - Starting a HTTP Service: "admin/http.md"
+        - Troubleshooting SElinux: "admin/selinux-troubleshooting.md"
+      - Configure the ADR App:
+        - Configuration: "configuration/index.md"
+        - Required Settings: "configuration/required-settings.md"
+        - LDAP Authentication: "configuration/ldap.md"
       - Upgrade: "admin/upgrade.md"
       - Uninstall: "admin/uninstall.md"
   - Developer Guide:
