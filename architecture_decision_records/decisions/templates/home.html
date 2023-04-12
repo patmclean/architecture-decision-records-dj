@@ -1,0 +1,47 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load markdownify %}
+{% block title %} - Home {% endblock %}
+{% block content %}
+
+
+{% for decision in decisions_list %}
+{% if decision.status.name == "Accepted" %}
+<div class="alert alert-success" role="alert">
+{% elif decision.status.name == "Proposed" %}
+<div class="alert alert-info" role="alert">
+{% elif decision.status.name == "Superseded" %}
+<div class="alert alert-warning" role="alert">
+{% elif decision.status.name == "Rejected" %}
+<div class="alert alert-danger" role="alert">
+{% endif %}
+<div class="pull-right small">
+    (Owner: {{ decision.author }})
+</div>
+<h4><a class="alert-link" href="{{ decision.get_absolute_url }}">{{ decision.slug }} - {{ decision.title }} </a></h4>
+<p>{{ decision.context | markdownify }}</p>
+
+</div>
+{% endfor %}
+{% if is_paginated %}
+
+{% if page_obj.has_previous %}
+<a class="btn btn-outline-info mb-4" href="?page=1"><i class="fa-solid fa-backward-fast"></i></a>
+<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><i class="fa-solid fa-backward-step"></i></a>
+{% endif %}
+
+{% for num in page_obj.paginator.page_range %}
+{% if page_obj.number == num %}
+<a class="btn btn-info mb-4" href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ num }}</a>
+{% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+<a class="btn btn-outline-info mb-4" href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ num }}</a>
+{% endif %}
+{% endfor %}
+
+{% if page_obj.has_next %}
+<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><i class="fa-solid fa-forward-step"></i></a>
+<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><i class="fa-solid fa-forward-fast"></i></a>
+{% endif %}
+
+{% endif %}
+{% endblock content %}

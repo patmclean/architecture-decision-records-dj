@@ -78,6 +78,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "architecture_decision_records.core.wsgi.application"
 
+LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = LOGOUT_REDIRECT_URL = "home"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -125,8 +127,23 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(ADR_ROOT, "static")
 STATIC_URL = "static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "project-static"),)
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+MARKDOWNIFY_STRIP = False
+MARKDOWNIFY = {
+    "default": {
+        "WHITELIST_TAGS": ["a", "abbr", "acronym", "b", "blockquote", "em", "i", "li", "ol", "p", "strong", "ul"],
+        "STRIP": False,
+    }
+}

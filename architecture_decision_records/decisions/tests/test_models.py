@@ -39,3 +39,29 @@ class ModelTests(TestCase):
 
         self.assertEqual(str(decision), decision.title)
         self.assertEqual(status, decision.status)
+
+    def test_create_revision(self):
+        """Test creating a decision is successful."""
+        status = Status.objects.create(name="Status1", slug="status1")
+        user = get_user_model().objects.create_user(
+            username="test@example.com",
+            email="test@example.ie",
+            password=TEST_AUTH_PWD,
+        )
+        decision = Decision.objects.create(
+            user=user,
+            stakeholder="I am a stakeholder.",
+            status=status,
+            slug="i-am-a-slug",
+            title="I am a title",
+            context="Sample decision context",
+            decision_description="Sample decision description.",
+            consequence="Sample decision consequence.",
+            date_created=timezone.now(),
+        )
+        
+
+
+        self.assertEqual(str(decision), decision.title)
+        self.assertEqual(status, decision.status)
+

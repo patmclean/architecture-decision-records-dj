@@ -656,6 +656,28 @@ Django = "*"
 markdown = "*"
 
 [[package]]
+name = "django-webserver"
+version = "1.2.0"
+description = "Django management commands for production webservers"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-webserver-1.2.0.tar.gz", hash = "sha256:c976979d15b5ff9a212f7904d3b779e22219aebb4857860fcaf20e4e40f1da40"},
+    {file = "django_webserver-1.2.0-py2.py3-none-any.whl", hash = "sha256:09200631f266484b9e944e38e92681d6e9aa7d90d089a5c86d5fb08fddad84fe"},
+]
+
+[package.dependencies]
+Django = "*"
+
+[package.extras]
+gunicorn = ["gunicorn"]
+pyuwsgi = ["pyuwsgi"]
+test = ["mock", "pytest"]
+uvicorn = ["uvicorn (>0.6)"]
+waitress = ["waitress"]
+
+[[package]]
 name = "django-xhtml2pdf"
 version = "0.0.4"
 description = "A Django app to generate pdfs from templates"
@@ -960,7 +982,7 @@ testing = ["Django (<3.1)", "attrs", "colorama", "docopt", "pytest (<7.0.0)"]
 name = "jinja2"
 version = "3.1.2"
 description = "A very fast and expressive template engine."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -1160,7 +1182,7 @@ testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
 name = "markupsafe"
 version = "2.1.2"
 description = "Safely add untrusted strings to HTML/XML markup."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -2877,4 +2899,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.12"
-content-hash = "40d1d58f5f9fbc5ba1c2d95cb4d475069d66f0c44d9caa319120701eef4a172a"
+content-hash = "2a9231564fc81820af732fba3bc1c421541cb4cf5d796759ee712cdeb3b67c7b"

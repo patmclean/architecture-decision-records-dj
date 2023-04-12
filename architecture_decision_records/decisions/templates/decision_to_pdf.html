@@ -1,0 +1,98 @@
+{% load static %}
+{% load markdownify %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>ADR - {{ decision.slug }} - {{ decision.title }}</title>
+</head>
+
+<body>
+    <main class="flex-shrink-0">
+        <div class="container my-5">
+            <h3>{{ decision.slug }} - {{ decision.title }}</h3>
+            <div class="mb-3">
+                <strong>Status: </strong>{% if decision.status.name == "Accepted" %}
+                <span class="badge bg-success" role="alert">
+                {% elif decision.status.name == "Proposed" %}
+                <span class="badge bg-info" role="alert">
+                {% elif decision.status.name == "Superseded" %}
+                <span class="badge bg-warning" role="alert">
+                {% elif decision.status.name == "Rejected" %}
+                <span class="badge bg-danger" role="alert">
+                {% endif %}{{decision.status.name}}</span>
+            </div>
+            <div class="card  border-primary mb-3">
+                <div class="card-header">
+                    <h4>Context</h4>
+                </div>
+                <div class="card-body rendered-markdown">
+                    <p>{{ decision.context | markdownify }}</p>
+                </div>
+            </div>
+            <div class="card  border-primary mb-3">
+                <div class="card-header">
+                    <h4>Decision</h4>
+                </div>
+                <div class="card-body rendered-markdown">
+                    <p>{{decision.decision_description | markdownify }}</p>
+                </div>
+            </div>
+            <div class="card border-primary mb-3">
+                <div class="card-header">
+                    <h4>Consequences</h4>
+                </div>
+                <div class="card-body rendered-markdown">
+                    <p>{{ decision.consequence | markdownify }}</p>
+                </div>
+            </div>
+
+
+            <div class="card border-primary mb-3">
+                <div class="card-header">
+                    <strong>Errata</strong>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Author: {{ decision.author }}</li>
+                                <li>Created: {{ decision.date_created }}</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Stakeholder: {{ decision.stakeholder }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <h5 class="text-muted">ADR Revision/Comment history</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-muted">Date</th>
+                        <th class="text-muted">Author/Name</th>
+                        <th class="text-muted">Changes/Comment</th>
+                        <th class="text-muted">Revision</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in decision.revisioncomment_set.all %}
+                    <tr>
+                        <td class="col-lg-2 col-md-2 col-sm-2 text-muted">{{ item.date_created }}</td>
+                        <td class="col-lg-2 col-md-2 col-sm-2 text-muted">{{ item.author }}</td>
+                        <td class="col-lg-6 col-md-6 col-sm-6 text-muted">{{ item.content }}</td>
+                        <td class="col-lg-2 col-md-2 col-sm-2 text-muted">{{ item.version }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

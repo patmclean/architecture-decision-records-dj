@@ -1,0 +1,227 @@
+[
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 1,
+            "status": 3,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0001",
+            "title": "ADR Template",
+            "context": "There seems to be no agreed, easy-to-use, lean format for capturing architecture decisions in a written format for later reference. We should avoid long, verbose and complicated formats, because they are normally not read, updated and used. On the other hand, we need clarity and at least some precision so that we’re able to prepare, align and document decisions with the stakeholders. The hope is that this will help us avoid unnecessary rework and help us committing to decisions that were taken.",
+            "decision_description": "We will use the format of ADR (Architecture Decision Records), described e.g. in this blog: https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions, for capturing important decisions around technology and architecture within the P1Arch group and One Strike workstream 02. We may share this with others in One Strike if it turns out to be useful. \r\nOur ADRs will be stored on the Enterprise Continuum in an ADR library. File names will be …/ADR-XXX.docx and numbered sequentially. ADR numbers must not be reused.\r\nADRs are one or two pages long, but not more. We will use full sentences in the interest of precision and clarity.",
+            "consequence": "We expect a better transparency and clarity for architecture decisions amongst One Strike teams and their stakeholders. As the ADR format is lightweight and simple, we expect no major resistance for experimenting with it. We expect some changes and improvements in how ADRs are governed, but let’s start quickly now and not spend too much time with finding answers to all nitty gritty details that may need to be solved while using ADRs in practice.",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 1,
+            "status": 3,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0002",
+            "title": "Pat's Accepted ADR Template",
+            "context": "I am an accepted context",
+            "decision_description": "I am an accepted decision description",
+            "consequence": "I am an accepted consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 4,
+            "status": 4,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0003",
+            "title": "Darrel's Superseded ADR Template",
+            "context": "I am a Superseded context",
+            "decision_description": "I am a Superseded decision description",
+            "consequence": "I am a Superseded consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 3,
+            "status": 2,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0004",
+            "title": "Michael's Rejected ADR Template",
+            "context": "I am a Rejected context",
+            "decision_description": "I am a Rejected decision description",
+            "consequence": "I am a Rejected consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 1,
+            "status": 1,
+            "slug": "ADR0005",
+            "stakeholder": "NSE Team",
+            "title": "Pat's Proposed ADR Template",
+            "context": "I am a Proposed context",
+            "decision_description": "I am a Proposed decision description",
+            "consequence": "I am a Proposed consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 1,
+            "status": 3,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0006",
+            "title": "Pat's Second ADR Template",
+            "context": "There seems to be no agreed, easy-to-use, lean format for capturing architecture decisions in a written format for later reference. We should avoid long, verbose and complicated formats, because they are normally not read, updated and used. On the other hand, we need clarity and at least some precision so that we’re able to prepare, align and document decisions with the stakeholders. The hope is that this will help us avoid unnecessary rework and help us committing to decisions that were taken.",
+            "decision_description": "We will use the format of ADR (Architecture Decision Records), described e.g. in this blog: https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions, for capturing important decisions around technology and architecture within the P1Arch group and One Strike workstream 02. We may share this with others in One Strike if it turns out to be useful. \r\nOur ADRs will be stored on the Enterprise Continuum in an ADR library. File names will be …/ADR-XXX.docx and numbered sequentially. ADR numbers must not be reused.\r\nADRs are one or two pages long, but not more. We will use full sentences in the interest of precision and clarity.",
+            "consequence": "We expect a better transparency and clarity for architecture decisions amongst One Strike teams and their stakeholders. As the ADR format is lightweight and simple, we expect no major resistance for experimenting with it. We expect some changes and improvements in how ADRs are governed, but let’s start quickly now and not spend too much time with finding answers to all nitty gritty details that may need to be solved while using ADRs in practice.",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 3,
+            "status": 3,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0007",
+            "title": "Michael's Accepted ADR Template",
+            "context": "I am an accepted context",
+            "decision_description": "I am an accepted decision description",
+            "consequence": "I am an accepted consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 3,
+            "status": 4,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0008",
+            "title": "Michael's Superseded ADR Template",
+            "context": "I am a Superseded context",
+            "decision_description": "I am a Superseded decision description",
+            "consequence": "I am a Superseded consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 2,
+            "status": 2,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0009",
+            "title": "Garry's - Rejected ADR Template",
+            "context": "I am a Rejected context",
+            "decision_description": "I am a Rejected decision description",
+            "consequence": "I am a Rejected consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 5,
+            "status": 1,
+            "slug": "ADR0010",
+            "stakeholder": "NSE Team",
+            "title": "Mark's Proposed ADR Template",
+            "context": "I am a Proposed context",
+            "decision_description": "I am a Proposed decision description",
+            "consequence": "I am a Proposed consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 4,
+            "status": 3,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0011",
+            "title": "Darrell's ADR Template",
+            "context": "There seems to be no agreed, easy-to-use, lean format for capturing architecture decisions in a written format for later reference. We should avoid long, verbose and complicated formats, because they are normally not read, updated and used. On the other hand, we need clarity and at least some precision so that we’re able to prepare, align and document decisions with the stakeholders. The hope is that this will help us avoid unnecessary rework and help us committing to decisions that were taken.",
+            "decision_description": "We will use the format of ADR (Architecture Decision Records), described e.g. in this blog: https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions, for capturing important decisions around technology and architecture within the P1Arch group and One Strike workstream 02. We may share this with others in One Strike if it turns out to be useful. \r\nOur ADRs will be stored on the Enterprise Continuum in an ADR library. File names will be …/ADR-XXX.docx and numbered sequentially. ADR numbers must not be reused.\r\nADRs are one or two pages long, but not more. We will use full sentences in the interest of precision and clarity.",
+            "consequence": "We expect a better transparency and clarity for architecture decisions amongst One Strike teams and their stakeholders. As the ADR format is lightweight and simple, we expect no major resistance for experimenting with it. We expect some changes and improvements in how ADRs are governed, but let’s start quickly now and not spend too much time with finding answers to all nitty gritty details that may need to be solved while using ADRs in practice.",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 2,
+            "status": 3,
+            "stakeholder": "IDC Team",
+            "slug": "ADR0012",
+            "title": "Garry's Accepted ADR Template",
+            "context": "I am an accepted context",
+            "decision_description": "I am an accepted decision description",
+            "consequence": "I am an accepted consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 5,
+            "status": 4,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0013",
+            "title": "Mark's Superseded ADR Template",
+            "context": "I am a Superseded context",
+            "decision_description": "I am a Superseded decision description",
+            "consequence": "I am a Superseded consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 4,
+            "status": 2,
+            "stakeholder": "NSE Team",
+            "slug": "ADR0014",
+            "title": "Darrel's Rejected ADR Template",
+            "context": "I am a Rejected context",
+            "decision_description": "I am a Rejected decision description",
+            "consequence": "I am a Rejected consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "decisions.decision",
+        "fields": {
+            "user": 2,
+            "status": 1,
+            "slug": "ADR0015",
+            "stakeholder": "NSE Team",
+            "title": "Gary's Proposed ADR Template",
+            "context": "I am a Proposed context",
+            "decision_description": "I am a Proposed decision description",
+            "consequence": "I am a Proposed consequence",
+            "date_created": "2023-04-04T11:11:11.111Z",
+            "date_updated": null
+        }
+    }
+]

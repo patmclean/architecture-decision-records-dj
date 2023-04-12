@@ -43,7 +43,6 @@ DATABASES = {
     }
 }
 
-SECRET_KEY = os.getenv("ADR_SECRET_KEY", "nhv3xb1%to7gv4@=$e*#^@_902qc9-pq_ksy*lq62+4arz_s=%$")
 
 
 AUTH_LDAP_CONNECTION_OPTIONS = {

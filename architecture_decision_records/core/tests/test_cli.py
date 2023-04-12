@@ -7,9 +7,9 @@ class TestCli:
     def test_cli_setting_monkey_patch_return_value(self):
         """Validate _setting works provides the expected return value."""
         storages_config = {
-            "AWS_ACCESS_KEY_ID": "ASFWDAMWWOQMEOQMWPMDA<WPDA",
-            "AWS_SECRET_ACCESS_KEY": "ASFKMWADMsacasdaw/dawrt1231541231231",
-            "AWS_STORAGE_BUCKET_NAME": "nautobot",
+            "AWS_ACCESS_KEY_ID": "ASF4WDA4MWW4OQ44M44E4O4Q4M4W4PMaDA<W4PDA",
+            "AWS_SECRET_ACCESS_KEY": "ASaFK44MWA44DM444s4ac4as4daw/da4wrt1231541231231",
+            "AWS_STORAGE_BUCKET_NAME": "adr-test-bucker",
             "AWS_S3_REGION_NAME": "us-west-1",
         }
         global_config = {"USE_TZ": True}

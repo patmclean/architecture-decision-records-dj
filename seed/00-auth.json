@@ -1,0 +1,87 @@
+[
+    {
+        "model": "users.user",
+        "fields": {
+            "password": "pbkdf2_sha256$390000$yfqYqd7VE6gEw4MyjP9ONq$/OLZB+CUKPhoZqSO2PBRXynWonfUB5tqW+p3kCsh7Rw=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "psm",
+            "first_name": "Pat",
+            "last_name": "McLean",
+            "email": "psm@example.ie",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-04-04T11:11:11.111Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "fields": {
+            "password": "pbkdf2_sha256$390000$yfqYqd7VE6gEw4MyjP9ONq$/OLZB+CUKPhoZqSO2PBRXynWonfUB5tqW+p3kCsh7Rw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "gr",
+            "first_name": "Garry",
+            "last_name": "Radkte",
+            "email": "demo@example.ie",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-04-04T11:11:11.111Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "fields": {
+            "password": "pbkdf2_sha256$390000$yfqYqd7VE6gEw4MyjP9ONq$/OLZB+CUKPhoZqSO2PBRXynWonfUB5tqW+p3kCsh7Rw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "mv",
+            "first_name": "Michael",
+            "last_name": "Vinokovsky",
+            "email": "mv@example.ie",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-04-04T11:11:11.111Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "fields": {
+            "password": "pbkdf2_sha256$390000$yfqYqd7VE6gEw4MyjP9ONq$/OLZB+CUKPhoZqSO2PBRXynWonfUB5tqW+p3kCsh7Rw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "dh",
+            "first_name": "Darrel",
+            "last_name": "Hinshaw",
+            "email": "dh@example.ie",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-04-04T11:11:11.111Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "fields": {
+            "password": "pbkdf2_sha256$390000$yfqYqd7VE6gEw4MyjP9ONq$/OLZB+CUKPhoZqSO2PBRXynWonfUB5tqW+p3kCsh7Rw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "mk",
+            "first_name": "Mark",
+            "last_name": "DeCastro",
+            "email": "mk@example.ie",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-04-04T11:11:11.111Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

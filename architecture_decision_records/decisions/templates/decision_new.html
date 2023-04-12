@@ -1,0 +1,15 @@
+
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} - New Decision {% endblock %}
+{% block content %}
+{% if form.instance.id %}
+<h1>Editing form.instance.title</h1>
+{% else %}
+<h1>New Architecture Decision Record</h1>
+{% endif %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <button type="submit" class="btn btn-primary">Create</button>
+{% endblock content %}
